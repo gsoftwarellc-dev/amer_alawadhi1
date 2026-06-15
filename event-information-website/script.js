@@ -19,6 +19,7 @@ const ticketForm = document.getElementById("ticket-form");
 const eventSelect = document.getElementById("event-select");
 const ticketQuantityInput = document.getElementById("ticket-quantity");
 const errorMessage = document.getElementById("error-message");
+const selectedPrice = document.getElementById("selected-price");
 const resultPlaceholder = document.getElementById("result-placeholder");
 const resultDetails = document.getElementById("result-details");
 const priceResult = document.getElementById("price-result");
@@ -122,6 +123,7 @@ function formatCurrency(amount) {
 function openTicketCalculator(eventKey) {
     eventSelect.value = eventKey;
     errorMessage.textContent = "";
+    updateSelectedPrice();
     document.getElementById("tickets").scrollIntoView({
         behavior: "smooth"
     });
@@ -151,9 +153,26 @@ for (let index = 0; index < eventCards.length; index++) {
 }
 
 // Remove an old error as soon as the user changes an input.
-eventSelect.addEventListener("change", clearError);
+eventSelect.addEventListener("change", function () {
+    clearError();
+    updateSelectedPrice();
+});
 ticketQuantityInput.addEventListener("input", clearError);
 
 function clearError() {
     errorMessage.textContent = "";
+}
+
+// Show the selected ticket price clearly below the dropdown.
+function updateSelectedPrice() {
+    const selectedEventKey = eventSelect.value;
+
+    if (selectedEventKey === "") {
+        selectedPrice.textContent = "Select an event to view its ticket price.";
+        selectedPrice.classList.remove("has-price");
+    } else {
+        const selectedEvent = eventData[selectedEventKey];
+        selectedPrice.textContent = "Price per ticket: " + formatCurrency(selectedEvent.price);
+        selectedPrice.classList.add("has-price");
+    }
 }

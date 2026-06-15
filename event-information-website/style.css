@@ -567,6 +567,45 @@ tbody tr:hover {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.select-wrapper {
+    position: relative;
+    min-width: 0;
+}
+
+.select-wrapper::after {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    content: "";
+    pointer-events: none;
+    transform: translateY(-70%) rotate(45deg);
+}
+
+.select-wrapper select {
+    padding-right: 42px;
+    appearance: none;
+    cursor: pointer;
+}
+
+.selected-price {
+    margin: 9px 0 0;
+    padding: 9px 11px;
+    border-radius: 7px;
+    color: #64748b;
+    background-color: #f1f5f9;
+    font-size: 0.82rem;
+}
+
+.selected-price.has-price {
+    color: #1d4ed8;
+    background-color: #eaf2ff;
+    font-weight: bold;
+}
+
 .form-group select:hover,
 .form-group input:hover {
     border-color: #8493aa;
@@ -965,9 +1004,14 @@ tbody tr:hover {
 
     .form-group select,
     .form-group input {
-        padding-right: 10px;
+        min-height: 52px;
+        padding-right: 38px;
         padding-left: 10px;
-        font-size: 0.9rem;
+        font-size: 16px;
+    }
+
+    .selected-price {
+        font-size: 0.78rem;
     }
 
     .result-details div {
