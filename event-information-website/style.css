@@ -311,12 +311,6 @@ a {
     line-height: 1.35;
 }
 
-.event-card p {
-    margin: 0 0 18px;
-    color: var(--text-color);
-    font-size: 0.95rem;
-}
-
 .event-details {
     margin: auto 0 20px;
     padding: 16px 0;
