@@ -487,6 +487,7 @@ tbody tr:hover {
 
 .ticket-form,
 .price-result {
+    min-width: 0;
     padding: 32px;
     border: 1px solid var(--border-color);
     border-radius: 16px;
@@ -506,7 +507,12 @@ tbody tr:hover {
     display: flex;
     align-items: center;
     gap: 13px;
+    min-width: 0;
     margin-bottom: 25px;
+}
+
+.form-heading div {
+    min-width: 0;
 }
 
 .form-heading > span {
@@ -534,6 +540,7 @@ tbody tr:hover {
 }
 
 .form-group {
+    min-width: 0;
     margin-bottom: 20px;
 }
 
@@ -547,6 +554,8 @@ tbody tr:hover {
 
 .form-group select,
 .form-group input {
+    display: block;
+    max-width: 100%;
     width: 100%;
     min-height: 49px;
     padding: 12px 14px;
@@ -920,6 +929,45 @@ tbody tr:hover {
     .hero-actions {
         align-items: stretch;
         flex-direction: column;
+    }
+
+    #tickets .container {
+        width: 94%;
+    }
+
+    #tickets .section-heading {
+        margin-bottom: 32px;
+    }
+
+    #tickets .section-heading h2 {
+        font-size: 2rem;
+    }
+
+    .ticket-form,
+    .price-result {
+        padding: 22px 18px;
+    }
+
+    .form-heading {
+        align-items: flex-start;
+        gap: 11px;
+    }
+
+    .form-heading > span {
+        flex-basis: 34px;
+        width: 34px;
+        height: 34px;
+    }
+
+    .form-heading h3 {
+        font-size: 1.12rem;
+    }
+
+    .form-group select,
+    .form-group input {
+        padding-right: 10px;
+        padding-left: 10px;
+        font-size: 0.9rem;
     }
 
     .result-details div {
