@@ -212,7 +212,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 16px;
 }
 
 .button {
@@ -238,16 +238,62 @@ a {
 }
 
 .button-secondary {
-    border-color: rgba(255, 255, 255, 0.75);
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: none;
+    border-color: #fbbf24;
+    color: #17233b;
+    background-color: #fbbf24;
+    box-shadow: 0 10px 24px rgba(251, 191, 36, 0.28);
 }
 
 .button-secondary:hover,
 .button-secondary:focus {
-    border-color: var(--white);
-    background-color: var(--white);
-    color: var(--heading-color);
+    border-color: #f59e0b;
+    color: #17233b;
+    background-color: #f59e0b;
+}
+
+.hero-actions .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-width: 205px;
+    padding: 15px 24px;
+    border-radius: 10px;
+    font-size: 1rem;
+    letter-spacing: 0.2px;
+}
+
+.hero-actions .button span {
+    display: grid;
+    place-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 1.1rem;
+    transition: transform 0.2s ease;
+}
+
+.hero-actions .button:hover span,
+.hero-actions .button:focus span {
+    transform: translateX(3px);
+}
+
+.hero-actions .button-secondary:hover span,
+.hero-actions .button-secondary:focus span {
+    transform: scale(1.08);
+}
+
+.hero-primary-button {
+    border-color: #3b82f6;
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.38);
+}
+
+.hero-primary-button:hover,
+.hero-primary-button:focus {
+    border-color: #60a5fa;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
 }
 
 /* Event cards use CSS Grid */
