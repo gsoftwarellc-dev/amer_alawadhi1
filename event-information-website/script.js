@@ -23,6 +23,7 @@ const resultPlaceholder = document.getElementById("result-placeholder");
 const resultDetails = document.getElementById("result-details");
 const priceResult = document.getElementById("price-result");
 const eventCardLinks = document.querySelectorAll(".card-link");
+const eventCards = document.querySelectorAll(".event-card");
 
 // Store the result element IDs so a loop can update the output.
 const resultElementIds = [
@@ -117,11 +118,35 @@ function formatCurrency(amount) {
     return "$" + amount.toFixed(2);
 }
 
+// Select an event and move to the ticket calculator.
+function openTicketCalculator(eventKey) {
+    eventSelect.value = eventKey;
+    errorMessage.textContent = "";
+    document.getElementById("tickets").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
 // Select the matching event when a card's ticket link is clicked.
 for (let index = 0; index < eventCardLinks.length; index++) {
-    eventCardLinks[index].addEventListener("click", function () {
-        eventSelect.value = eventCardLinks[index].dataset.event;
-        errorMessage.textContent = "";
+    eventCardLinks[index].addEventListener("click", function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        openTicketCalculator(eventCardLinks[index].dataset.event);
+    });
+}
+
+// Make the complete event card clickable with mouse or keyboard.
+for (let index = 0; index < eventCards.length; index++) {
+    eventCards[index].addEventListener("click", function () {
+        openTicketCalculator(eventCards[index].dataset.event);
+    });
+
+    eventCards[index].addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            openTicketCalculator(eventCards[index].dataset.event);
+        }
     });
 }
 
