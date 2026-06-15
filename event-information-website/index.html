@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View upcoming events, schedules, and calculate ticket prices.">
+    <title>EventHub | Event Information Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Website header and navigation -->
+    <header class="site-header">
+        <div class="container header-content">
+            <a class="logo" href="#home">
+                <span class="logo-mark">E</span>
+                <span>EventHub</span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#schedule">Schedule</a></li>
+                    <li><a class="nav-button" href="#tickets">Get Tickets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Introductory section -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <p class="hero-badge">2026 Event Collection</p>
+                <h1>Find Your Next <span>Great Event</span></h1>
+                <p>
+                    Explore upcoming technology, music, and business events.
+                    View the details and calculate your ticket price in seconds.
+                </p>
+                <div class="hero-actions">
+                    <a class="button" href="#events">Explore Events</a>
+                    <a class="button button-secondary" href="#tickets">Calculate Tickets</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event cards section -->
+        <section class="section" id="events">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">Upcoming Events</p>
+                    <h2>Events for 2026</h2>
+                    <p>Choose from three exciting events designed for different interests.</p>
+                </div>
+
+                <div class="event-grid">
+                    <article class="event-card">
+                        <img
+                            src="images/technology-conference.jpg"
+                            alt="Audience watching a presentation at a modern technology conference"
+                        >
+                        <div class="event-card-content">
+                            <span class="event-category">Technology</span>
+                            <h3>Technology Conference 2026</h3>
+                            <p>
+                                Discover new technology trends and hear useful ideas
+                                from professionals working in the technology industry.
+                            </p>
+                            <ul class="event-details">
+                                <li><strong>Date:</strong> March 15, 2026</li>
+                                <li><strong>Time:</strong> 9:00 AM - 5:00 PM</li>
+                                <li><strong>Location:</strong> City Convention Center</li>
+                                <li><strong>Price:</strong> $50 per ticket</li>
+                            </ul>
+                            <a class="card-link" href="#tickets" data-event="technology">
+                                Calculate Tickets <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <img
+                            src="images/music-festival.jpg"
+                            alt="Crowd enjoying an outdoor music festival at sunset"
+                        >
+                        <div class="event-card-content">
+                            <span class="event-category">Music</span>
+                            <h3>Music Festival 2026</h3>
+                            <p>
+                                Enjoy a full day of live music featuring local performers,
+                                popular bands, food stalls, and festival activities.
+                            </p>
+                            <ul class="event-details">
+                                <li><strong>Date:</strong> June 20, 2026</li>
+                                <li><strong>Time:</strong> 12:00 PM - 10:00 PM</li>
+                                <li><strong>Location:</strong> Riverside Park</li>
+                                <li><strong>Price:</strong> $75 per ticket</li>
+                            </ul>
+                            <a class="card-link" href="#tickets" data-event="music">
+                                Calculate Tickets <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="event-card">
+                        <img
+                            src="images/business-summit.jpg"
+                            alt="Professional presenter speaking at a business leadership summit"
+                        >
+                        <div class="event-card-content">
+                            <span class="event-category">Business</span>
+                            <h3>Business Leadership Summit</h3>
+                            <p>
+                                Learn practical leadership skills, meet business owners,
+                                and gain ideas for building successful organizations.
+                            </p>
+                            <ul class="event-details">
+                                <li><strong>Date:</strong> September 10, 2026</li>
+                                <li><strong>Time:</strong> 8:30 AM - 4:30 PM</li>
+                                <li><strong>Location:</strong> Grand Business Hotel</li>
+                                <li><strong>Price:</strong> $100 per ticket</li>
+                            </ul>
+                            <a class="card-link" href="#tickets" data-event="business">
+                                Calculate Tickets <span aria-hidden="true">&rarr;</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event schedule table -->
+        <section class="section schedule-section" id="schedule">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">Plan Your Visit</p>
+                    <h2>Event Schedule</h2>
+                    <p>Review the main activities planned for each event.</p>
+                </div>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Event</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Main Activity</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Technology Conference 2026</td>
+                                <td>March 15, 2026</td>
+                                <td>9:00 AM</td>
+                                <td>Opening Keynote</td>
+                                <td>City Convention Center</td>
+                            </tr>
+                            <tr>
+                                <td>Music Festival 2026</td>
+                                <td>June 20, 2026</td>
+                                <td>12:00 PM</td>
+                                <td>Live Performances</td>
+                                <td>Riverside Park</td>
+                            </tr>
+                            <tr>
+                                <td>Business Leadership Summit</td>
+                                <td>September 10, 2026</td>
+                                <td>8:30 AM</td>
+                                <td>Leadership Workshop</td>
+                                <td>Grand Business Hotel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ticket price calculator -->
+        <section class="section" id="tickets">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label">Ticket Booking</p>
+                    <h2>Calculate Your Ticket Price</h2>
+                    <p>Select an event and enter the number of tickets you need.</p>
+                </div>
+
+                <div class="ticket-layout">
+                    <form class="ticket-form" id="ticket-form" novalidate>
+                        <div class="form-heading">
+                            <span>1</span>
+                            <div>
+                                <h3>Enter Ticket Details</h3>
+                                <p>Complete both fields to see your total.</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="event-select">Select an event</label>
+                            <select id="event-select" name="event">
+                                <option value="">-- Choose an event --</option>
+                                <option value="technology">Technology Conference 2026 - $50</option>
+                                <option value="music">Music Festival 2026 - $75</option>
+                                <option value="business">Business Leadership Summit - $100</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ticket-quantity">Number of tickets</label>
+                            <input
+                                type="number"
+                                id="ticket-quantity"
+                                name="quantity"
+                                min="1"
+                                step="1"
+                                placeholder="Enter ticket quantity"
+                            >
+                        </div>
+
+                        <p class="error-message" id="error-message" role="alert"></p>
+                        <button class="button calculate-button" type="submit">
+                            Calculate Price
+                        </button>
+                    </form>
+
+                    <div class="price-result" id="price-result" aria-live="polite">
+                        <div class="form-heading">
+                            <span>2</span>
+                            <div>
+                                <h3>Price Summary</h3>
+                                <p>Your calculated booking total.</p>
+                            </div>
+                        </div>
+
+                        <div class="result-placeholder" id="result-placeholder">
+                            <span class="placeholder-icon" aria-hidden="true">$</span>
+                            <p>Your ticket price details will appear here.</p>
+                        </div>
+
+                        <dl class="result-details" id="result-details" hidden>
+                            <div>
+                                <dt>Selected event</dt>
+                                <dd id="result-event"></dd>
+                            </div>
+                            <div>
+                                <dt>Ticket quantity</dt>
+                                <dd id="result-quantity"></dd>
+                            </div>
+                            <div>
+                                <dt>Original price</dt>
+                                <dd id="result-original"></dd>
+                            </div>
+                            <div>
+                                <dt>Discount amount</dt>
+                                <dd id="result-discount"></dd>
+                            </div>
+                            <div class="total-row">
+                                <dt>Final total price</dt>
+                                <dd id="result-total"></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+
+                <div class="discount-info">
+                    <h3>Group Discount Rules</h3>
+                    <ul>
+                        <li><strong>1-2</strong><span>Tickets</span><b>No discount</b></li>
+                        <li><strong>3-5</strong><span>Tickets</span><b>10% off</b></li>
+                        <li><strong>6+</strong><span>Tickets</span><b>20% off</b></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Website footer -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <a class="footer-logo" href="#home">
+                    <span class="logo-mark">E</span>
+                    <span>EventHub</span>
+                </a>
+                <p>Discover events, review schedules, and calculate ticket prices.</p>
+            </div>
+
+            <div class="student-credit">
+                <span>Website Project By</span>
+                <strong>Amer Alawadhi</strong>
+                <p>Student ID: 3087</p>
+            </div>
+
+            <a class="back-to-top" href="#home">
+                Back to top <span aria-hidden="true">&uarr;</span>
+            </a>
+        </div>
+
+        <div class="container footer-bottom">
+            <p>&copy; 2026 EventHub. University Web Design and Development Project.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
